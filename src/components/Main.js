@@ -28,7 +28,7 @@ export class Main extends Component {
 					<div className="col-12 col-sm-12 col-md-4 col-lg-5 left">
 						<h1 className="text-center mt-4 header">Hi, I am Addo.<br /> I am a passionate fullstack web developer.</h1>
 						<div className="sub">
-							<p>I am currently working as a technical support engineer and a mentor at <a href="#">microverseInc.</a></p>
+							<p>I am currently working as a technical support engineer and a mentor at <a href="https://support.microverse.org/en/articles/2476189-what-is-the-microverse-full-time-program">microverseInc.</a></p>
 							<p>I enjoy building responsive web applications for clients and people all over the world.</p>
 							<p>Follow my work, words and photos below :</p>
 							<div className="d-flex justify-content-around">
@@ -111,7 +111,7 @@ export class Main extends Component {
 									<a href="https://raw.githack.com/Forison/Js-to-do-list/homepage/dist/index.html" className="view"> View on desktop</a>
 								</div>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
-									<img src={privateEvent} className="img-fluid" />
+									<img src={privateEvent} className="img-fluid" alt="private event page" />
 									<a href="https://eventiaproject.herokuapp.com/login" className="view"> View on desktop and mobile</a>
 								</div>
 								<p className="text-center p-3 mt-3">

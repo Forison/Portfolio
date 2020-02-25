@@ -12,13 +12,9 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 export default function Carousell() {
-	const [index, setIndex] = useState(0);
-	const [direction, setDirection] = useState(null);
+	const [setIndex] = useState(0);
+	const [setDirection] = useState(null);
 
-	const handleSelect = (selectedIndex, e) => {
-		setIndex(selectedIndex);
-		setDirection(e.direction);
-	};
 	return (
 		<Carousel>
 			<Carousel.Item>
@@ -35,7 +31,7 @@ export default function Carousell() {
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
-				<a href="https://github.com/Forison/youtube/blob/master/index.html" target="_blank">
+				<a href="https://github.com/Forison/youtube/blob/master/index.html" target="_blank" rel="noopener noreferrer">
 					<img
 						className="d-block w-100 sector"
 						src={htmll}
@@ -48,7 +44,7 @@ export default function Carousell() {
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
-				<a href="https://github.com/Forison/Using-Bootstrap" target="_blank">
+				<a href="https://github.com/Forison/Using-Bootstrap" target="_blank" rel="noopener noreferrer">
 					<img
 						className="d-block w-100 sector"
 						src={boostrapImage}
@@ -61,7 +57,7 @@ export default function Carousell() {
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
-				<a href="https://github.com/Forison/weatherApp" target="_blank">
+				<a href="https://github.com/Forison/weatherApp" target="_blank" rel="noopener noreferrer">
 					<img
 						className="d-block w-100 sector"
 						src={javs}
@@ -74,7 +70,7 @@ export default function Carousell() {
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
-				<a href="https://github.com/Forison/weatherApp" target="_blank">
+				<a href="https://github.com/Forison/weatherApp" target="_blank" rel="noopener noreferrer">
 					<img
 						className="d-block w-100 sector"
 						src={wpacks}
@@ -87,7 +83,7 @@ export default function Carousell() {
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
-				<a href="https://github.com/Forison/calculator" target="_blank">
+				<a href="https://github.com/Forison/calculator" target="_blank" rel="noopener noreferrer">
 					<img
 						className="d-block w-100 sector"
 						src={reactt}
@@ -100,7 +96,7 @@ export default function Carousell() {
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
-				<a href="https://github.com/Forison/tic-tac-toe" target="_blank">
+				<a href="https://github.com/Forison/tic-tac-toe" target="_blank" rel="noopener noreferrer">
 					<img
 						className="d-block w-100 sector"
 						src={ruby}
@@ -113,7 +109,7 @@ export default function Carousell() {
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
-				<a href="https://github.com/Forison/social-network" target="_blank">
+				<a href="https://github.com/Forison/social-network" target="_blank" rel="noopener noreferrer">
 					<img
 						className="d-block w-100 sector"
 						src={rails}
@@ -126,7 +122,7 @@ export default function Carousell() {
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
-				<a href="https://github.com/Forison/social-network/tree/master/spec/models" target="_blank">
+				<a href="https://github.com/Forison/social-network/tree/master/spec/models" target="_blank" rel="noopener noreferrer">
 					<img
 						className="d-block w-100 sector"
 						src={tdd}
