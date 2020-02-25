@@ -1,60 +1,21 @@
-# Bookstore Project
+# My Porfolio
 
-> A very simple React-Redux application.
+#### _This is a portfolio project designed and developed by Addo boakye forison for himself. This porfolio seeks to show the skills I possess when it comes to fullstack web developement. The page consist of my skills and project I have worked so far as a developer. Visit live demo link to take a tour on my porfolio_.
 
-![Application Screenshot](./screenshot.png)
+![Application Screenshot](./portfolio.png)
 
 ## Built With
 
 - React
-- Redux
+- bootstrap
 
 ## Live Demo
 
 [Live on Heroku](https://bookstore-ad1.herokuapp.com/)
 
-## Getting Started
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-To get a local copy up and running follow these simple example steps.
-
-## Setup
-
-Clone this repository to your machine
-
-```bash
-git clone git@github.com:juzQrios/Bookstore.git
-cd Bookstore
-```
-
-## Install
-
-Install dependencies
-
-```bash
-npm install
-```
-
-## Start local server
-
-In the project directory, run:
-
-```bash
-npm start
-```
-
-View the application at [`http://localhost:3000`](http://localhost:3000)
-
 ## Authors
 
 👤 **Addo Forison**
-
-- Github: [@Forison](https://github.com/Forison)
-
-👤 **Darshan**
-
-- Github: [@juzQrios](https://github.com/juzQrios)
 
 ## Reviewers
 

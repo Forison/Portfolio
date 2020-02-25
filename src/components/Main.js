@@ -35,6 +35,8 @@ export class Main extends Component {
 								<a href="https://github.com/Forison" target="_blank" rel="noopener noreferrer" >Github</a>
 								<a href="https://www.linkedin.com/in/forison/" target="_blank" rel="noopener noreferrer" >LinkedIn</a>
 								<a href="https://twitter.com/addo_forison" target="_blank" rel="noopener noreferrer" >Twitter</a>
+								<a href="https://www.hackernoon.com/implementing-singly-linked-list-with-ruby-om2df3ya6" target="_blank" rel="noopener noreferrer" >Hackernoon</a>
+								<a href="https://medium.com/@forison/basic-positioning-of-elements-on-a-web-page-3d6be729a75a" target="_blank" rel="noopener noreferrer" >Medium</a>
 							</div>
 							<br />
 
