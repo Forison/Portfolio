@@ -7,11 +7,11 @@
 ## Built With
 
 - React
-- bootstrap
+- Bootstrap
 
 ## Live Demo
 
-[Live on Heroku](https://bookstore-ad1.herokuapp.com/)
+[www.bfaddo.com](https://bfaddo.com/)
 
 ## Authors
 
