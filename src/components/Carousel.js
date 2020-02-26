@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import boostrapImage from '../skills/bootstrap.png';
 import css from '../skills/css.png';
 import htmll from '../skills/html1.png';
@@ -12,13 +12,13 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 export default function Carousell() {
-	const [setIndex] = useState(0);
-	const [setDirection] = useState(null);
 
 	return (
 		<Carousel>
 			<Carousel.Item>
-				<a href="https://github.com/Forison/youtube/blob/master/assets/css/style.css" target="_blank">
+				<a href="https://github.com/Forison/youtube/blob/master/assets/css/style.css"
+					target="_blank"
+					rel="noopener noreferrer">
 					<img
 						className="d-block w-100 sector"
 						src={css}

@@ -3,13 +3,17 @@ import Carousel from './Carousel';
 import coders from '../skills/coders.png';
 import recom from '../skills/recom.png';
 import privateEvent from '../skills/pe.png';
-
+import axios from 'axios';
 
 export class Main extends Component {
 	constructor(props) {
 		super(props)
 
 		this.state = {
+			sender: '',
+			message: '',
+			responseFrom: '',
+			sent: null,
 			isLoading: false,
 			show: false
 		}
@@ -20,8 +24,38 @@ export class Main extends Component {
 			show: !prevState.show
 		}));
 	}
+	handleEmailChange = (e) => {
+		this.setState({
+			sender: e.target.value
+		})
+	}
+	handleMessageChange = (e) => {
+		this.setState({
+			message: e.target.value
+		})
+	}
+	handleSubmit = async (e) => {
+		e.preventDefault();
+		const { sender, message } = this.state;
+		const response = await axios.post('https://myestateapi.herokuapp.com/alerts', { sender, message });
+		console.log(response)
+		if (response.status === 201) {
+			this.setState({
+				sent: true,
+				responseFrom: "message is sent",
+			});
+			setTimeout(() => {
+				window.location.reload();
+			}, 2000)
+		} else {
+			this.setState({
+				sent: false,
+				responseFrom: "oops message not sent",
+			});
+		}
+	}
 	render() {
-		const { show } = this.state;
+		const { show, responseFrom } = this.state;
 		return (
 			<div className="container-fluid">
 				<div className="row">
@@ -32,40 +66,55 @@ export class Main extends Component {
 							<p>I enjoy building responsive web applications for clients and people all over the world.</p>
 							<p>Follow my work, words and photos below :</p>
 							<div className="d-flex justify-content-around">
-								<a href="https://github.com/Forison" target="_blank" rel="noopener noreferrer" >Github</a>
-								<a href="https://www.linkedin.com/in/forison/" target="_blank" rel="noopener noreferrer" >LinkedIn</a>
-								<a href="https://twitter.com/addo_forison" target="_blank" rel="noopener noreferrer" >Twitter</a>
-								<a href="https://www.hackernoon.com/implementing-singly-linked-list-with-ruby-om2df3ya6" target="_blank" rel="noopener noreferrer" >Hackernoon</a>
-								<a href="https://medium.com/@forison/basic-positioning-of-elements-on-a-web-page-3d6be729a75a" target="_blank" rel="noopener noreferrer" >Medium</a>
+								<a href="https://github.com/Forison" target="_blank" rel="noopener noreferrer" className="p-1">
+									Github
+									</a>
+								<a href="https://www.linkedin.com/in/forison/" target="_blank" rel="noopener noreferrer" className="p-1">
+									LinkedIn
+									</a>
+								<a href="https://twitter.com/addo_forison" target="_blank" rel="noopener noreferrer" className="p-1">
+									Twitter
+									</a>
+								<a href="https://www.hackernoon.com/implementing-singly-linked-list-with-ruby-om2df3ya6" target="_blank" rel="noopener noreferrer" className="p-1">
+									Hackernoon
+									</a>
+								<a href="https://medium.com/@forison/basic-positioning-of-elements-on-a-web-page-3d6be729a75a" target="_blank" rel="noopener noreferrer" className="p-1">
+									Medium
+									</a>
 							</div>
 							<br />
 
 						</div>
 						{show ?
 							(<div className="position-absolute bg-light p-2 send shadow-lg send-wrap">
-								<form className="form mt-5">
-									<div class="form-group">
-										<input type="email" class="form-control" placeholder="name@example.com" />
+								<form className="form mt-5" onSubmit={this.handleSubmit}>
+									<div className="form-group">
+										<input onChange={this.handleEmailChange} type="email" className="form-control" placeholder="name@example.com" />
 									</div>
-									<div class="form-group">
-										<textarea class="form-control" placeholder="enter message here" rows="3"></textarea>
+									<div className="form-group">
+										<textarea onChange={this.handleMessageChange} className="form-control" placeholder="enter message here" rows="3"></textarea>
 									</div>
-									<div class="row justify-content-center mt-2">
-										<button type="submit" class="btn btn-success say-hello mt-3" onClick={this.displayModal}>
+									<div className="row justify-content-center mt-2">
+										<button type="submit" className="btn btn-success say-hello mt-3" >
 											Send
 					          </button>
-										<button type="submit" class="btn btn-red say-hello mt-3" onClick={this.displayModal}>
+										<button className="btn btn-red say-hello mt-3" onClick={this.displayModal}>
 											Cancel
 					          </button>
 									</div>
+									{!responseFrom.includes('oops') ?
+										(<span className="text-success">{responseFrom}</span>)
+										:
+										(<span className="text-danger">{responseFrom}</span>)
+									}
 								</form>
 							</div>)
 							:
 							(<div>
-								<div class="row justify-content-center mt-2">
+								<div className="row justify-content-center mt-2">
 									<button
 										type="submit"
-										class="btn btn-primary say-hello mt-1"
+										className="btn btn-primary say-hello mt-1"
 										onClick={this.displayModal}>
 										Say hello
 									</button>
