@@ -13,7 +13,7 @@ export class Main extends Component {
 			sender: '',
 			message: '',
 			responseFrom: '',
-			sent: null,
+			sent: false,
 			isLoading: false,
 			show: false
 		}
@@ -39,7 +39,6 @@ export class Main extends Component {
 		this.setState({ isLoading: true })
 		const { sender, message } = this.state;
 		const response = await axios.post('/alerts',{ sender, message });
-		console.log(response)
 		if (response.status === 200) {
 			this.setState({
 				sent: true,

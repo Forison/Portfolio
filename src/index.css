@@ -113,8 +113,8 @@ body{
 @media only screen and (max-width: 600px) {
   .send{
   bottom: 0;
-  top:0;
-
+  top:10x;
+  left: auto
 }
   .right{
     overflow: none;
