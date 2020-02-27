@@ -38,8 +38,9 @@ export class Main extends Component {
 		e.preventDefault();
 		this.setState({ isLoading: true })
 		const { sender, message } = this.state;
-		const response = await axios.post('https://myestateapi.herokuapp.com/alerts', { sender, message });
-		if (response.status === 201) {
+		const response = await axios.post('/alerts',{ sender, message });
+		console.log(response)
+		if (response.status === 200) {
 			this.setState({
 				sent: true,
 				responseFrom: "message is sent",
