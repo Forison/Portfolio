@@ -140,38 +140,19 @@ export class Main extends Component {
 								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
 									<embed src="https://forison.github.io/Using-Bootstrap/" className="sector" />
 									<div className="row justify-content-center p-1">
-										<a href="https://forison.github.io/Using-Bootstrap/" className="view"> View on desktop and mobile</a>
+										<a href="https://forison.github.io/Using-Bootstrap/" className="view"> View App on desktop and mobile</a>
 									</div>
 								</div>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
 									<embed src="https://guarded-harbor-05894.herokuapp.com/" className="sector" />
 									<div className="row justify-content-center p-1">
-										<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> View on desktop and mobile</a>
+										<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> View App on desktop and mobile</a>
 									</div>
 								</div>
-								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-									<embed src="https://raw.githack.com/Forison/battleShip/battleship/dist/index.html" className="sector" />
+								<div className="col-12 col-sm-12 col-md-12 col-lg-9 mx-auto">
+									<img src={privateEvent} className="img-fluid sector" alt="private event page" />
 									<div className="row justify-content-center p-1">
-										<a href="https://raw.githack.com/Forison/battleShip/battleship/dist/index.html" className="view"> View on desktop</a>
-									</div>
-								</div>
-								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
-									<embed src="https://forison.github.io/custom-grid-based-framework/" className="sector" />
-									<div className="row justify-content-center p-1">
-										<a href="https://forison.github.io/custom-grid-based-framework/" className="view"> View on desktop and mobile</a>
-									</div>
-								</div>
-								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
-									<img src={privateEvent} className="img-fluid" alt="private event page" />
-									<div className="row justify-content-center p-1">
-										<a href="https://nosebook.herokuapp.com/" className="view"> View on desktop and mobile</a>
-									</div>
-								</div>
-
-								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
-									<embed src="https://raw.githack.com/Forison/Js-to-do-list/homepage/dist/index.html" className="sector" />
-									<div className="row justify-content-center p-1">
-										<a href="https://raw.githack.com/Forison/Js-to-do-list/homepage/dist/index.html" className="view"> View on desktop</a>
+										<a href="https://nosebook.herokuapp.com/" className="view"> View App on desktop </a>
 									</div>
 								</div>
 							</div>
