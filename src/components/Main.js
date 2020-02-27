@@ -32,10 +32,11 @@ export class Main extends Component {
 	handleMessageChange = (e) => {
 		this.setState({
 			message: e.target.value
-		})
+		});
 	}
 	handleSubmit = async (e) => {
 		e.preventDefault();
+		this.setState({ isLoading: true })
 		const { sender, message } = this.state;
 		const response = await axios.post('https://myestateapi.herokuapp.com/alerts', { sender, message });
 		if (response.status === 201) {
@@ -54,35 +55,33 @@ export class Main extends Component {
 		}
 	}
 	render() {
-		const { show, responseFrom } = this.state;
+		const { show, responseFrom, isLoading } = this.state;
 		return (
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col-12 col-sm-12 col-md-4 col-lg-5 left">
-						<h1 className="text-center mt-4 header">Hi, I am Addo.<br /> I am a passionate fullstack web developer.</h1>
+						<h1 className="text-center mt-4 header">Hi, I am Addo.<br /> A passionate fullstack web developer.</h1>
 						<div className="sub">
 							<p>I am currently working as a technical support engineer and a mentor at <a href="https://support.microverse.org/en/articles/2476189-what-is-the-microverse-full-time-program">microverseInc.</a></p>
 							<p>I enjoy building responsive web applications for clients and people all over the world.</p>
 							<p>Follow my work, words and photos below :</p>
-							<div className="d-flex justify-content-around">
-								<a href="https://github.com/Forison" target="_blank" rel="noopener noreferrer" className="p-1">
+							<div className="d-flex justify-content-around mx-auto">
+								<a href="https://github.com/Forison" target="_blank" rel="noopener noreferrer" className="contact p-1">
 									Github
 									</a>
-								<a href="https://www.linkedin.com/in/forison/" target="_blank" rel="noopener noreferrer" className="p-1">
+								<a href="https://www.linkedin.com/in/forison/" target="_blank" rel="noopener noreferrer" className="contact p-1">
 									LinkedIn
 									</a>
-								<a href="https://twitter.com/addo_forison" target="_blank" rel="noopener noreferrer" className="p-1">
+								<a href="https://twitter.com/addo_forison" target="_blank" rel="noopener noreferrer" className="contact p-1">
 									Twitter
 									</a>
-								<a href="https://www.hackernoon.com/implementing-singly-linked-list-with-ruby-om2df3ya6" target="_blank" rel="noopener noreferrer" className="p-1">
+								<a href="https://www.hackernoon.com/implementing-singly-linked-list-with-ruby-om2df3ya6" target="_blank" rel="noopener noreferrer" className="contact p-1">
 									Hackernoon
 									</a>
-								<a href="https://medium.com/@forison/basic-positioning-of-elements-on-a-web-page-3d6be729a75a" target="_blank" rel="noopener noreferrer" className="p-1">
+								<a href="https://medium.com/@forison/basic-positioning-of-elements-on-a-web-page-3d6be729a75a" target="_blank" rel="noopener noreferrer" className="contact p-1">
 									Medium
 									</a>
 							</div>
-							<br />
-
 						</div>
 						{show ?
 							(<div className="position-absolute bg-light p-2 send shadow-lg send-wrap">
@@ -94,7 +93,7 @@ export class Main extends Component {
 										<textarea onChange={this.handleMessageChange} className="form-control" placeholder="enter message here" rows="3"></textarea>
 									</div>
 									<div className="row justify-content-center mt-2">
-										<button type="submit" className="btn btn-success say-hello mt-3" >
+										<button type="submit" className="btn btn-success say-hello mt-3" disable={isLoading}>
 											Send
 					          </button>
 										<button className="btn btn-red say-hello mt-3" onClick={this.displayModal}>
@@ -110,7 +109,7 @@ export class Main extends Component {
 							</div>)
 							:
 							(<div>
-								<div className="row justify-content-center mt-2">
+								<div className="row justify-content-center">
 									<button
 										type="submit"
 										className="btn btn-primary say-hello mt-1"
@@ -140,31 +139,41 @@ export class Main extends Component {
 							<div className="row mx-auto">
 								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
 									<embed src="https://forison.github.io/Using-Bootstrap/" className="sector" />
-									<a href="https://forison.github.io/Using-Bootstrap/" className="view"> View on desktop and mobile</a>
+									<div className="row justify-content-center p-1">
+										<a href="https://forison.github.io/Using-Bootstrap/" className="view"> View on desktop and mobile</a>
+									</div>
 								</div>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
 									<embed src="https://guarded-harbor-05894.herokuapp.com/" className="sector" />
-									<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> View on desktop and mobile</a>
+									<div className="row justify-content-center p-1">
+										<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> View on desktop and mobile</a>
+									</div>
 								</div>
-								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
+								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
 									<embed src="https://raw.githack.com/Forison/battleShip/battleship/dist/index.html" className="sector" />
-									<a href="https://raw.githack.com/Forison/battleShip/battleship/dist/index.html" className="view"> View on desktop</a>
+									<div className="row justify-content-center p-1">
+										<a href="https://raw.githack.com/Forison/battleShip/battleship/dist/index.html" className="view"> View on desktop</a>
+									</div>
 								</div>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
 									<embed src="https://forison.github.io/custom-grid-based-framework/" className="sector" />
-									<a href="https://forison.github.io/custom-grid-based-framework/" className="view"> View on desktop and mobile</a>
-								</div>
-								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
-									<embed src="https://raw.githack.com/Forison/Js-to-do-list/homepage/dist/index.html" className="sector" />
-									<a href="https://raw.githack.com/Forison/Js-to-do-list/homepage/dist/index.html" className="view"> View on desktop</a>
+									<div className="row justify-content-center p-1">
+										<a href="https://forison.github.io/custom-grid-based-framework/" className="view"> View on desktop and mobile</a>
+									</div>
 								</div>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
 									<img src={privateEvent} className="img-fluid" alt="private event page" />
-									<a href="https://eventiaproject.herokuapp.com/login" className="view"> View on desktop and mobile</a>
+									<div className="row justify-content-center p-1">
+										<a href="https://nosebook.herokuapp.com/" className="view"> View on desktop and mobile</a>
+									</div>
 								</div>
-								<p className="text-center p-3 mt-3">
-									Click on tile to be directed to view project.
-								</p>
+
+								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
+									<embed src="https://raw.githack.com/Forison/Js-to-do-list/homepage/dist/index.html" className="sector" />
+									<div className="row justify-content-center p-1">
+										<a href="https://raw.githack.com/Forison/Js-to-do-list/homepage/dist/index.html" className="view"> View on desktop</a>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div className="pre-footer">

@@ -52,10 +52,12 @@ body{
   width: 180px;
 }
 .sector{
-  height: 350px;
+  height: 300px;
   width: 100%;
   border: 1px solid #2E86C1;
   border-radius: 5px;
+  box-shadow: inset 0 0 10px #000000;
+  padding: 5px;
 }
 .clearFix{
   height: 60px;
@@ -113,4 +115,19 @@ body{
     left: 25px;
     top:0;
   }
+  .right{
+    overflow: none;
+    height: 100%;
+    padding-top: 10px;
+  }
+  .contact{
+    font-size: 14px;
+  }
+  .left{
+  height: auto;
+  padding-bottom: 20px;
+  }
+.sub{
+  width: 98%;
+}
 }
