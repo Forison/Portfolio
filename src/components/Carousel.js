@@ -65,7 +65,7 @@ export default function Carousell() {
 					/>
 				</a>
 				<Carousel.Caption>
-					<h3>Javascript developer</h3>
+					<h3>Javascript</h3>
 					<p>Click on image to be directed to project associated with skill</p>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -78,7 +78,7 @@ export default function Carousell() {
 					/>
 				</a>
 				<Carousel.Caption>
-					<h3>Webpack developer</h3>
+					<h3>Webpack</h3>
 					<p>Click on image to be directed to project associated with skill</p>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -91,7 +91,7 @@ export default function Carousell() {
 					/>
 				</a>
 				<Carousel.Caption>
-					<h3>React developer</h3>
+					<h3>React</h3>
 					<p>Click on image to be directed to project associated with skill</p>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -104,7 +104,7 @@ export default function Carousell() {
 					/>
 				</a>
 				<Carousel.Caption>
-					<h3>Ruby developer</h3>
+					<h3>Ruby</h3>
 					<p>Click on image to be directed to project associated with skill</p>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -117,7 +117,7 @@ export default function Carousell() {
 					/>
 				</a>
 				<Carousel.Caption>
-					<h3>Ruby on rails developer</h3>
+					<h3>Ruby on rails</h3>
 					<p>Click on image to be directed to project associated with skill</p>
 				</Carousel.Caption>
 			</Carousel.Item>

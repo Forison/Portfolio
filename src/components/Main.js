@@ -38,7 +38,7 @@ export class Main extends Component {
 		e.preventDefault();
 		this.setState({ isLoading: true })
 		const { sender, message } = this.state;
-		const response = await axios.post('/alerts',{ sender, message });
+		const response = await axios.post('/alerts', { sender, message });
 		if (response.status === 200) {
 			this.setState({
 				sent: true,
@@ -135,26 +135,35 @@ export class Main extends Component {
 							</div>
 						</div>
 						<div className="project">
-							<h2 className="p-3">Recent works</h2>
-							<div className="row mx-auto">
-								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
+							<h2 className="p-3 text-light">Recent works</h2>
+							<div className="row mx-auto flex-column">
+								<div className="col-12 col-sm-12 col-md-12 col-lg-5 mx-auto mt-3">
 									<embed src="https://forison.github.io/Using-Bootstrap/" className="sector" />
 									<div className="row justify-content-center p-1">
-										<a href="https://forison.github.io/Using-Bootstrap/" className="view"> View App on desktop and mobile</a>
+										<a href="https://forison.github.io/Using-Bootstrap/" className="view"> Responsive App</a>
 									</div>
 								</div>
-								<div className="col-12 col-sm-12 col-md-12 col-lg-6">
+								<div className="col-12 col-sm-12 col-md-12 col-lg-5 mx-auto mt-3">
 									<embed src="https://guarded-harbor-05894.herokuapp.com/" className="sector" />
 									<div className="row justify-content-center p-1">
-										<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> View App on desktop and mobile</a>
+										<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> Responsive App</a>
 									</div>
 								</div>
-								<div className="col-12 col-sm-12 col-md-12 col-lg-9 mx-auto">
-									<img src={privateEvent} className="img-fluid sector" alt="private event page" />
+
+								<div className="col-12 col-sm-12 col-md-12 col-lg-5 mx-auto mt-3">
+									<embed src="https://frozen-bastion-98066.herokuapp.com/home" className="sector" />
 									<div className="row justify-content-center p-1">
-										<a href="https://nosebook.herokuapp.com/" className="view"> View App on desktop </a>
+										<a href="https://frozen-bastion-98066.herokuapp.com" className="view"> Mobile App </a>
 									</div>
 								</div>
+
+								<div className="col-12 col-sm-12 col-md-12 col-lg-9 mx-auto mt-3">
+									<img src={privateEvent} className="img-fluid sector-last" alt="private event page" />
+									<div className="row justify-content-center p-1">
+										<a href="https://nosebook.herokuapp.com/" className="view"> Desktop App </a>
+									</div>
+								</div>
+
 							</div>
 						</div>
 						<div className="pre-footer">
@@ -171,7 +180,7 @@ export class Main extends Component {
 							</div>
 							<br />
 						</div>
-						<div className="my-footer">
+						<footer>
 							<h2 className="p-3"> Testimonies</h2>
 							<div className="row mx-auto">
 								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -185,7 +194,7 @@ export class Main extends Component {
 									</div>
 								</div>
 							</div>
-						</div>
+						</footer>
 					</div>
 				</div>
 			</div>
