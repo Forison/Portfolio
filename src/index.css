@@ -17,13 +17,13 @@ body{
 
 .skills{
   width: 100%;
-  background:transparent;
+  background:#444;
   box-shadow: inset 0 0 10px #000000;
 }
 .project{
   width: 100%;
   height: auto;
-  background: #00001a;
+  background: #0798f1;
   box-shadow: inset 0 0 10px #000000;
 }
 
@@ -53,6 +53,22 @@ body{
 }
 .sector{
   height: 450px;
+  width: 100%;
+  border: 5px solid #fff;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: inset 0 0 10px #000000;
+}
+.showcase{
+  height: 350px;
+  width: 100%;
+  border: 5px solid #555;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: inset 0 0 10px #000000;
+}
+.sector-3{
+  height: 500px;
   width: 100%;
   border: 5px solid #fff;
   border-radius: 25px;
@@ -120,7 +136,8 @@ body{
 }
 
 footer{
- background:#fff; 
+ background:#00001a; 
+ box-shadow: inset 0 0 10px #000000;
 }
 @media only screen and (max-width: 600px) {
   .send{

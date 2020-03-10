@@ -20,7 +20,7 @@ export default function Carousell() {
 					target="_blank"
 					rel="noopener noreferrer">
 					<img
-						className="d-block w-100 sector"
+						className="d-block w-100 showcase"
 						src={css}
 						alt="css developer"
 					/>
@@ -33,7 +33,7 @@ export default function Carousell() {
 			<Carousel.Item>
 				<a href="https://github.com/Forison/youtube/blob/master/index.html" target="_blank" rel="noopener noreferrer">
 					<img
-						className="d-block w-100 sector"
+						className="d-block w-100 showcase"
 						src={htmll}
 						alt="html developer"
 					/>
@@ -46,7 +46,7 @@ export default function Carousell() {
 			<Carousel.Item>
 				<a href="https://github.com/Forison/Using-Bootstrap" target="_blank" rel="noopener noreferrer">
 					<img
-						className="d-block w-100 sector"
+						className="d-block w-100 showcase"
 						src={boostrapImage}
 						alt="bootstrap developer"
 					/>
@@ -59,7 +59,7 @@ export default function Carousell() {
 			<Carousel.Item>
 				<a href="https://github.com/Forison/weatherApp" target="_blank" rel="noopener noreferrer">
 					<img
-						className="d-block w-100 sector"
+						className="d-block w-100 showcase"
 						src={javs}
 						alt="javascript developer"
 					/>
@@ -72,7 +72,7 @@ export default function Carousell() {
 			<Carousel.Item>
 				<a href="https://github.com/Forison/weatherApp" target="_blank" rel="noopener noreferrer">
 					<img
-						className="d-block w-100 sector"
+						className="d-block w-100 showcase"
 						src={wpacks}
 						alt="webpack developer"
 					/>
@@ -85,7 +85,7 @@ export default function Carousell() {
 			<Carousel.Item>
 				<a href="https://github.com/Forison/calculator" target="_blank" rel="noopener noreferrer">
 					<img
-						className="d-block w-100 sector"
+						className="d-block w-100 showcase"
 						src={reactt}
 						alt="react developer"
 					/>
@@ -98,7 +98,7 @@ export default function Carousell() {
 			<Carousel.Item>
 				<a href="https://github.com/Forison/tic-tac-toe" target="_blank" rel="noopener noreferrer">
 					<img
-						className="d-block w-100 sector"
+						className="d-block w-100 showcase"
 						src={ruby}
 						alt="ruby developer"
 					/>
@@ -111,7 +111,7 @@ export default function Carousell() {
 			<Carousel.Item>
 				<a href="https://github.com/Forison/social-network" target="_blank" rel="noopener noreferrer">
 					<img
-						className="d-block w-100 sector"
+						className="d-block w-100 showcase"
 						src={rails}
 						alt="rails developer"
 					/>
@@ -124,7 +124,7 @@ export default function Carousell() {
 			<Carousel.Item>
 				<a href="https://github.com/Forison/social-network/tree/master/spec/models" target="_blank" rel="noopener noreferrer">
 					<img
-						className="d-block w-100 sector"
+						className="d-block w-100 showcase"
 						src={tdd}
 						alt="test driven devepment"
 					/>

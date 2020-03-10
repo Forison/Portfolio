@@ -123,7 +123,7 @@ export class Main extends Component {
 					</div>
 					<div className="col-12 col-sm-12 col-md-8 col-lg-7 overflow-auto right p-0">
 						<div className="skills">
-							<h2 className="p-3"> Skills</h2>
+							<h2 className="p-3 text-light"> Skills</h2>
 							<div className="row mx-auto">
 								<div className="col-12 col-sm-6 col-md-4 col-lg-12">
 									<div >
@@ -137,7 +137,7 @@ export class Main extends Component {
 						<div className="project">
 							<h2 className="p-3 text-light">Recent works</h2>
 							<div className="row mx-auto flex-column">
-								<div className="col-12 col-sm-12 col-md-12 col-lg-5 mx-auto mt-3">
+								<div className="col-12 col-sm-12 col-md-12 col-lg-7 mx-auto mt-3">
 									<embed src="https://forison.github.io/Using-Bootstrap/" className="sector" />
 									<div className="row justify-content-center p-1">
 										<a href="https://forison.github.io/Using-Bootstrap/" className="view"> Responsive App</a>
@@ -150,8 +150,8 @@ export class Main extends Component {
 									</div>
 								</div>
 
-								<div className="col-12 col-sm-12 col-md-12 col-lg-5 mx-auto mt-3">
-									<embed src="https://frozen-bastion-98066.herokuapp.com/home" className="sector" />
+								<div className="col-12 col-sm-12 col-md-12 col-lg-6 mx-auto mt-3">
+									<embed src="https://frozen-bastion-98066.herokuapp.com/home" className="sector-3" />
 									<div className="row justify-content-center p-1">
 										<a href="https://frozen-bastion-98066.herokuapp.com" className="view"> Mobile App </a>
 									</div>
@@ -181,7 +181,7 @@ export class Main extends Component {
 							<br />
 						</div>
 						<footer>
-							<h2 className="p-3"> Testimonies</h2>
+							<h2 className="p-3 text-white"> Testimonies</h2>
 							<div className="row mx-auto">
 								<div className="col-12 col-sm-12 col-md-12 col-lg-12">
 									<div className="testimony-wrapper">
