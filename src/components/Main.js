@@ -38,7 +38,7 @@ export class Main extends Component {
 		e.preventDefault();
 		this.setState({ isLoading: true })
 		const { sender, message } = this.state;
-		const response = await axios.post('/alerts', { sender, message });
+		const response = await axios.post('https://myestateapi.herokuapp.com/alerts', { sender, message });
 		if (response.status === 200) {
 			this.setState({
 				sent: true,
@@ -83,44 +83,8 @@ export class Main extends Component {
 									</a>
 							</div>
 						</div>
-						{show ?
-							(<div className="position-absolute bg-light p-2 send shadow-lg send-wrap">
-								<form className="form mt-5" onSubmit={this.handleSubmit}>
-									<div className="form-group">
-										<input onChange={this.handleEmailChange} type="email" className="form-control" placeholder="name@example.com" />
-									</div>
-									<div className="form-group">
-										<textarea onChange={this.handleMessageChange} className="form-control" placeholder="enter message here" rows="3"></textarea>
-									</div>
-									<div className="row justify-content-center mt-2">
-										<button type="submit" className="btn btn-success say-hello mt-3" disable={isLoading}>
-											Send
-					          </button>
-										<button className="btn btn-red say-hello mt-3" onClick={this.displayModal}>
-											Cancel
-					          </button>
-									</div>
-									{!responseFrom.includes('oops') ?
-										(<span className="text-success">{responseFrom}</span>)
-										:
-										(<span className="text-danger">{responseFrom}</span>)
-									}
-								</form>
-							</div>)
-							:
-							(<div>
-								<div className="row justify-content-center">
-									<button
-										type="submit"
-										className="btn btn-primary say-hello mt-1"
-										onClick={this.displayModal}>
-										Say hello
-									</button>
-								</div>
-							</div>
-							)
-						}
 					</div>
+
 					<div className="col-12 col-sm-12 col-md-8 col-lg-7 overflow-auto right p-0">
 						<div className="skills">
 							<h2 className="p-3 text-light"> Skills</h2>
@@ -151,7 +115,7 @@ export class Main extends Component {
 								</div>
 
 								<div className="col-12 col-sm-12 col-md-12 col-lg-6 mx-auto mt-3">
-									<embed src="https://frozen-bastion-98066.herokuapp.com/home" className="sector-3" />
+									<embed src="https://frozen-bastion-98066.herokuapp.com" className="sector-3" />
 									<div className="row justify-content-center p-1">
 										<a href="https://frozen-bastion-98066.herokuapp.com" className="view"> Mobile App </a>
 									</div>
@@ -197,6 +161,43 @@ export class Main extends Component {
 						</footer>
 					</div>
 				</div>
+				{show ?
+					(<div className="bg-light p-2 send send-wrap shadow-lg">
+						<form className="form mt-5" onSubmit={this.handleSubmit}>
+							<div className="form-group">
+								<input onChange={this.handleEmailChange} type="email" className="form-control" placeholder="name@example.com" />
+							</div>
+							<div className="form-group">
+								<textarea onChange={this.handleMessageChange} className="form-control" placeholder="enter message here" rows="3"></textarea>
+							</div>
+							<div className="row justify-content-center mt-2">
+								<button type="submit" className="btn btn-success say-hello mt-3" disable={isLoading}>
+									Send
+					          </button>
+								<button className="btn btn-red say-hello mt-3" onClick={this.displayModal}>
+									Cancel
+					          </button>
+							</div>
+							{!responseFrom.includes('oops') ?
+								(<span className="text-success">{responseFrom}</span>)
+								:
+								(<span className="text-danger">{responseFrom}</span>)
+							}
+						</form>
+					</div>)
+					:
+					(<div>
+						<div className="row justify-content-center">
+							<button
+								type="submit"
+								className="btn btn-primary fixed-bottom say-hello-main mt-1"
+								onClick={this.displayModal}>
+								🖐
+									</button>
+						</div>
+					</div>
+					)
+				}
 			</div>
 		)
 	}
