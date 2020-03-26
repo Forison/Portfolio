@@ -17,6 +17,6 @@
 
 👤 **Addo Forison**
 
-## Reviewers
+## Appreciation
 
 > Additional support from [Microverse](https://www.microverse.org/) team.
