@@ -4,7 +4,7 @@ import App from './components/App';
 import './index.css';
 
 const bodyToggle = () => {
-	const color = ['#DEF1FD', '#AED6F1', '#AED6F1', '#AED6F1',]
+	const color = ['#AED6F1', '#0EBFE9', '#0EBFE9', '#0EBFE9', '#009ACD', '#009ACD', '#009ACD', '#AED6F1'];
 	let i = 0;
 	setInterval(function () {
 		document.body.style.backgroundColor = color[i];
