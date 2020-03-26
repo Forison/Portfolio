@@ -101,20 +101,20 @@ export class Main extends Component {
 						<div className="project">
 							<h2 className="p-3 text-light">Recent works</h2>
 							<div className="row mx-auto flex-column">
-								<div className="col-12 col-sm-12 col-md-12 col-lg-7 mx-auto mt-3">
+								<div className="col-12 col-sm-12 col-md-12 col-lg-7 mx-auto mt-3 shadow-lg p-4">
 									<embed src="https://forison.github.io/Using-Bootstrap/" className="sector" />
 									<div className="row justify-content-center p-1">
 										<a href="https://forison.github.io/Using-Bootstrap/" className="view"> Responsive App</a>
 									</div>
 								</div>
-								<div className="col-12 col-sm-12 col-md-12 col-lg-5 mx-auto mt-3">
+								<div className="col-12 col-sm-12 col-md-12 col-lg-6 mx-auto mt-3 shadow-lg p-4">
 									<embed src="https://guarded-harbor-05894.herokuapp.com/" className="sector" />
 									<div className="row justify-content-center p-1">
 										<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> Responsive App</a>
 									</div>
 								</div>
 
-								<div className="col-12 col-sm-12 col-md-12 col-lg-6 mx-auto mt-3">
+								<div className="col-12 col-sm-12 col-md-12 col-lg-6 mx-auto mt-3 shadow-lg p-4">
 									<embed src="https://frozen-bastion-98066.herokuapp.com" className="sector-3" />
 									<div className="row justify-content-center p-1">
 										<a href="https://frozen-bastion-98066.herokuapp.com" className="view"> Mobile App </a>
@@ -171,7 +171,7 @@ export class Main extends Component {
 								<textarea onChange={this.handleMessageChange} className="form-control" placeholder="enter message here" rows="3"></textarea>
 							</div>
 							<div className="row justify-content-center mt-2">
-								<button type="submit" className="btn btn-success say-hello mt-3" disable={isLoading}>
+								<button type="submit" className="btn btn-success say-hello mt-3" disable={isLoading.toString()}>
 									Send
 					          </button>
 								<button className="btn btn-red say-hello mt-3" onClick={this.displayModal}>

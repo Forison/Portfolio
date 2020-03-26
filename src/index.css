@@ -17,13 +17,13 @@ body{
 
 .skills{
   width: 100%;
-  background:#444;
+  background:#333;
   box-shadow: inset 0 0 10px #000000;
 }
 .project{
   width: 100%;
   height: auto;
-  background: #0798f1;
+  background: transparent;
   box-shadow: inset 0 0 10px #000000;
 }
 
