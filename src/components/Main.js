@@ -178,36 +178,37 @@ export class Main extends Component {
 				<div>
 
 					<div className="row justify-content-center">
-						<button
-							type="submit"
-							className="btn btn-primary fixed-bottom say-hello-main mt-1"
-							onClick={this.displayModal}>
-							<span role="img">🖐</span>
-						</button>
-
-						<div className="bg-light p-2 send send-wrap shadow-lg">
-							<form className="form mt-5" onSubmit={this.handleSubmit}>
-								<div className="form-group">
-									<input onChange={this.handleEmailChange} type="email" className="form-control" placeholder="name@example.com" />
-								</div>
-								<div className="form-group">
-									<textarea onChange={this.handleMessageChange} className="form-control" placeholder="enter message here" rows="3"></textarea>
-								</div>
-								<div className="row justify-content-center mt-2">
-									<button type="submit" className="btn btn-success say-hello mt-3" disable={isLoading.toString()}>
-										Send
+						{!show ? (
+							<button
+								type="submit"
+								className="btn btn-primary fixed-bottom say-hello-main mt-1"
+								onClick={this.displayModal}>
+								<span role="img">🖐</span>
+							</button>
+						) :
+							(<div className="bg-light p-2 send send-wrap shadow-lg">
+								<form className="form mt-5" onSubmit={this.handleSubmit}>
+									<div className="form-group">
+										<input onChange={this.handleEmailChange} type="email" className="form-control" placeholder="name@example.com" />
+									</div>
+									<div className="form-group">
+										<textarea onChange={this.handleMessageChange} className="form-control" placeholder="enter message here" rows="3"></textarea>
+									</div>
+									<div className="row justify-content-center mt-2">
+										<button type="submit" className="btn btn-success say-hello mt-3" disable={isLoading.toString()}>
+											Send
 					          </button>
-									<button className="btn btn-red say-hello mt-3" onClick={this.displayModal}>
-										Cancel
+										<button className="btn btn-red say-hello mt-3" onClick={this.displayModal}>
+											Cancel
 					          </button>
-								</div>
-								{!responseFrom.includes('oops') ?
-									(<span className="text-success">{responseFrom}</span>)
-									:
-									(<span className="text-danger">{responseFrom}</span>)
-								}
-							</form>
-						</div>
+									</div>
+									{!responseFrom.includes('oops') ?
+										(<span className="text-success">{responseFrom}</span>)
+										:
+										(<span className="text-danger">{responseFrom}</span>)
+									}
+								</form>
+							</div>)}
 
 					</div>
 				</div>
