@@ -65,7 +65,7 @@ export default function Carousell() {
 					/>
 				</a>
 				<Carousel.Caption>
-					<h3>Javascript</h3>
+					<h3>JavaScript</h3>
 					<p>Click on image to be directed to project associated with skill</p>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -117,7 +117,7 @@ export default function Carousell() {
 					/>
 				</a>
 				<Carousel.Caption>
-					<h3>Ruby on rails</h3>
+					<h3>Ruby on Rails</h3>
 					<p>Click on image to be directed to project associated with skill</p>
 				</Carousel.Caption>
 			</Carousel.Item>
@@ -130,7 +130,7 @@ export default function Carousell() {
 					/>
 				</a>
 				<Carousel.Caption>
-					<h3>Test Driven developement development with Rspec</h3>
+					<h3>Test Driven development with RSpec</h3>
 					<p>Click on image to be directed to project associated with skill</p>
 				</Carousel.Caption>
 			</Carousel.Item>

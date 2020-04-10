@@ -3,6 +3,9 @@ import Carousel from './Carousel';
 import coders from '../skills/coders.png';
 import recom from '../skills/recom.png';
 import privateEvent from '../skills/pe.png';
+import news from '../skills/news.png';
+import calculate from '../skills/calculate.png';
+import estate from '../skills/estate.png';
 import axios from 'axios';
 
 export class Main extends Component {
@@ -62,12 +65,12 @@ export class Main extends Component {
 					<div className="col-12 col-sm-12 col-md-4 col-lg-5 left">
 						<h1 className="text-center mt-4 header">Hi, I am Addo.<br /> A passionate fullstack web developer.</h1>
 						<div className="sub">
-							<p>I am currently working as a technical support engineer and a mentor at <a href="https://support.microverse.org/en/articles/2476189-what-is-the-microverse-full-time-program">microverseInc.</a></p>
+							<p>I am currently working as a Technical Support Engineer and a Mentor at <a href="https://support.microverse.org/en/articles/2476189-what-is-the-microverse-full-time-program" className="contact"> MicroverseInc.</a></p>
 							<p>I enjoy building responsive web applications for clients and people all over the world.</p>
-							<p>Follow my work, words and photos below :</p>
+							<p>Follow my work, words and photos below </p>
 							<div className="d-flex justify-content-around mx-auto">
 								<a href="https://github.com/Forison" target="_blank" rel="noopener noreferrer" className="contact p-1">
-									Github
+									GitHub
 									</a>
 								<a href="https://www.linkedin.com/in/forison/" target="_blank" rel="noopener noreferrer" className="contact p-1">
 									LinkedIn
@@ -101,21 +104,21 @@ export class Main extends Component {
 						<div className="project">
 							<h2 className="p-3 text-light">Recent works</h2>
 							<div className="row mx-auto flex-column">
-								<div className="col-12 col-sm-12 col-md-12 col-lg-7 mx-auto mt-3 shadow-lg p-4">
-									<embed src="https://forison.github.io/Using-Bootstrap/" className="sector" />
+								<div className="col-12 col-sm-12 col-md-12 col-lg-5 mx-auto mt-3 shadow-lg p-4">
+									<img src={news} className="sector" />
 									<div className="row justify-content-center p-1">
 										<a href="https://forison.github.io/Using-Bootstrap/" className="view"> Responsive App</a>
 									</div>
 								</div>
-								<div className="col-12 col-sm-12 col-md-12 col-lg-6 mx-auto mt-3 shadow-lg p-4">
-									<embed src="https://guarded-harbor-05894.herokuapp.com/" className="sector" />
+								<div className="col-12 col-sm-12 col-md-12 col-lg-5 mx-auto mt-3 shadow-lg p-4">
+									<img src={calculate} className="sector" />
 									<div className="row justify-content-center p-1">
 										<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> Responsive App</a>
 									</div>
 								</div>
 
-								<div className="col-12 col-sm-12 col-md-12 col-lg-6 mx-auto mt-3 shadow-lg p-4">
-									<embed src="https://frozen-bastion-98066.herokuapp.com" className="sector-3" />
+								<div className="col-12 col-sm-12 col-md-12 col-lg-5 mx-auto mt-3 shadow-lg p-4">
+									<img src={estate} className="sector-3" />
 									<div className="row justify-content-center p-1">
 										<a href="https://frozen-bastion-98066.herokuapp.com" className="view"> Mobile App </a>
 									</div>
@@ -133,14 +136,24 @@ export class Main extends Component {
 						<div className="pre-footer">
 							<h2 className="p-3"> Collaboration</h2>
 							<p className="text-center p-3 mt-3">
-								I'm proud to have collaborated(done mainly on github) with some awesome developers from different parts of the world on projects and  on solving data structures challenges.
-								<br />Developers from :</p>
+								I'm proud to have collaborated (done mainly on github) with some awesome developers from different parts of the world on projects and  on solving data structures challenges.
+								<br />Developers from:</p>
 							<div className="d-flex justify-content-around">
-								<a href="https://raw.githack.com/Forison/Js-to-do-list/homepage/dist/index.html" rel="noopener noreferrer" target="_blank">Belarus</a>
-								<a href="https://bookstore-ad1.herokuapp.com/" rel="noopener noreferrer" target="_blank">India</a>
-								<a href="https://github.com/Forison/tic-tac-toe" rel="noopener noreferrer" target="_blank">Liberia</a>
-								<a href="https://eventiaproject.herokuapp.com/" rel="noopener noreferrer" target="_blank">Spain</a>
-								<a href="https://forison.github.io/custom-grid-based-framework/" rel="noopener noreferrer" target="_blank">Nigeria</a>
+								<a href="https://raw.githack.com/Forison/Js-to-do-list/homepage/dist/index.html" rel="noopener noreferrer" target="_blank" className="contact">
+									Belarus
+									</a>
+								<a href="https://bookstore-ad1.herokuapp.com/" rel="noopener noreferrer" target="_blank" className="contact">
+									India
+									</a>
+								<a href="https://github.com/Forison/tic-tac-toe" rel="noopener noreferrer" target="_blank" className="contact">
+									Liberia
+									</a>
+								<a href="https://eventiaproject.herokuapp.com/" rel="noopener noreferrer" target="_blank" className="contact">
+									Spain
+									</a>
+								<a href="https://forison.github.io/custom-grid-based-framework/" rel="noopener noreferrer" target="_blank" className="contact">
+									Nigeria
+									</a>
 							</div>
 							<br />
 						</div>
@@ -161,43 +174,43 @@ export class Main extends Component {
 						</footer>
 					</div>
 				</div>
-				{show ?
-					(<div className="bg-light p-2 send send-wrap shadow-lg">
-						<form className="form mt-5" onSubmit={this.handleSubmit}>
-							<div className="form-group">
-								<input onChange={this.handleEmailChange} type="email" className="form-control" placeholder="name@example.com" />
-							</div>
-							<div className="form-group">
-								<textarea onChange={this.handleMessageChange} className="form-control" placeholder="enter message here" rows="3"></textarea>
-							</div>
-							<div className="row justify-content-center mt-2">
-								<button type="submit" className="btn btn-success say-hello mt-3" disable={isLoading.toString()}>
-									Send
+
+				<div>
+
+					<div className="row justify-content-center">
+						<button
+							type="submit"
+							className="btn btn-primary fixed-bottom say-hello-main mt-1"
+							onClick={this.displayModal}>
+							<span role="img">🖐</span>
+						</button>
+
+						<div className="bg-light p-2 send send-wrap shadow-lg">
+							<form className="form mt-5" onSubmit={this.handleSubmit}>
+								<div className="form-group">
+									<input onChange={this.handleEmailChange} type="email" className="form-control" placeholder="name@example.com" />
+								</div>
+								<div className="form-group">
+									<textarea onChange={this.handleMessageChange} className="form-control" placeholder="enter message here" rows="3"></textarea>
+								</div>
+								<div className="row justify-content-center mt-2">
+									<button type="submit" className="btn btn-success say-hello mt-3" disable={isLoading.toString()}>
+										Send
 					          </button>
-								<button className="btn btn-red say-hello mt-3" onClick={this.displayModal}>
-									Cancel
+									<button className="btn btn-red say-hello mt-3" onClick={this.displayModal}>
+										Cancel
 					          </button>
-							</div>
-							{!responseFrom.includes('oops') ?
-								(<span className="text-success">{responseFrom}</span>)
-								:
-								(<span className="text-danger">{responseFrom}</span>)
-							}
-						</form>
-					</div>)
-					:
-					(<div>
-						<div className="row justify-content-center">
-							<button
-								type="submit"
-								className="btn btn-primary fixed-bottom say-hello-main mt-1"
-								onClick={this.displayModal}>
-								🖐
-									</button>
+								</div>
+								{!responseFrom.includes('oops') ?
+									(<span className="text-success">{responseFrom}</span>)
+									:
+									(<span className="text-danger">{responseFrom}</span>)
+								}
+							</form>
 						</div>
+
 					</div>
-					)
-				}
+				</div>
 			</div>
 		)
 	}
